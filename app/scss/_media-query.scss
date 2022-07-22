@@ -1,0 +1,43 @@
+@media (max-width:830px){
+    .burger{
+        display: flex !important;
+    }
+
+    .header__menu{
+        transition: 0.3s all;
+        transform: translateX(-100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        background-color: $main-color;
+        width: 75%;
+        height: 100%;
+        align-items: center;
+        padding-top: 80px;
+        z-index: 50;
+        gap:30px;
+        overflow: auto;
+        .header__link{
+            color: #000000;
+        }
+        
+    }
+
+    .header__buttons{
+        transition: 0.3s all;
+        transform: translateX(-100%);
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 75%;
+        text-align: right;
+        color: #000000;
+        z-index: 60;
+        .header__help,.header__language,.header__language::before,.header__login{
+            color: #000000;
+        }
+    }
+
+}
+

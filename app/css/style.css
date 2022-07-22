@@ -140,9 +140,138 @@ body {
 }
 
 *[class*=__container] {
+  height: 100%;
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 /* ============= Blocks Styles ==============*/
+/* =========== header ============== */
+.header {
+  height: 80px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.2px;
+}
+.header__inner {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__link {
+  color: #BDBDBD;
+}
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.header__help, .header__language {
+  color: #333333;
+}
+.header__language:before {
+  content: "\e9c9";
+  font-family: "icomoon";
+  color: #333333;
+  font-size: 18px;
+}
+.header__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+.header .active__link {
+  color: #333333;
+}
+.header__login {
+  color: #4FAEAB;
+}
+.header .burger {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.header .burger:hover {
+  cursor: pointer;
+}
+.header .burger__line {
+  width: 30px;
+  height: 3px;
+  background-color: #4FAEAB;
+  margin-bottom: 5px;
+}
+.header .burger__line:last-child {
+  margin-bottom: 0px;
+}
+.header .visible {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@media (max-width: 830px) {
+  .burger {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .header__menu {
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #4FAEAB;
+    width: 75%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 80px;
+    z-index: 50;
+    gap: 30px;
+    overflow: auto;
+  }
+  .header__menu .header__link {
+    color: #000000;
+  }
+  .header__buttons {
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 75%;
+    text-align: right;
+    color: #000000;
+    z-index: 60;
+  }
+  .header__buttons .header__help, .header__buttons .header__language, .header__buttons .header__language::before, .header__buttons .header__login {
+    color: #000000;
+  }
+}
