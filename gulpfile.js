@@ -6,6 +6,7 @@ const uglify = require('gulp-uglify-es').default;
 const autoPrefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const clean = require('gulp-clean');
+const gulpClean = require('gulp-clean');
 
 function browsersync() {
     browserSync.init({
@@ -67,6 +68,7 @@ function scripts() {
 
 function build() {
     return src([
+        'app/css/style.css',
         'app/css/style.min.css',
         'app/fonts/**/*',
         'app/js/main.min.js',
@@ -88,6 +90,7 @@ exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.build = build;
 
-exports.build = series(cleanDist, images, build);
+exports.series = series(cleanDist, images, build);
 exports.default = parallel(styles, scripts, browsersync, watching); // чтобы все эти функции выполнялись вместе консоль не был занят только слежением или обновляением браузера
