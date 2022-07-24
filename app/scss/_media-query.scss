@@ -1,3 +1,50 @@
+@media (max-width:1320px){
+    .discover__left .white{
+        color: #000000;
+    }
+}
+
+@media (max-width:1145px){
+    .discover{
+        &__left{
+            text-align: center;
+            .white{
+                color: $main-color;
+            }
+            &-header{
+                max-width: 550px;
+            }
+            &-body{
+                margin-bottom: 20px;
+            }
+        }
+       
+        &__right{
+            max-width: 902px;
+        }
+    }
+
+    .discover__inner{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:1044px) {
+    .discover{
+        max-height: 1000px;
+        padding-top: 40px;
+        &__left-body{
+            color: #fff;
+        }
+        &__left-header{
+            .white{
+                color: #fff;
+            }
+        }
+        background-size: cover,28%;
+    }
+}
 @media (max-width:830px){
     .burger{
         display: flex !important;
@@ -12,7 +59,7 @@
         flex-direction: column;
         background-color: $main-color;
         width: 75%;
-        height: 100%;
+        height: 100vh;
         align-items: center;
         padding-top: 80px;
         z-index: 50;
@@ -23,7 +70,28 @@
         }
         
     }
+}
 
+@media (max-width:768px){
+    .discover__left-header{
+        margin: 0 auto;
+        line-height: 47px;
+        font-size: 39px;
+    }
+    .discover__left-body{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:380px){
+    .discover__left-header{
+        margin: 0 auto;
+        line-height: 40px;
+        font-size: 25px;
+    }
+    .discover__left-body{
+        font-size: 12px;
+    }
     .header__buttons{
         transition: 0.3s all;
         transform: translateX(-100%);
@@ -38,6 +106,5 @@
             color: #000000;
         }
     }
-
 }
 

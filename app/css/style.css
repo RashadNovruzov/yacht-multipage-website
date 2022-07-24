@@ -113,6 +113,10 @@ a {
   content: "\e9c9";
 }
 
+.icon-calendar-o:before {
+  content: "\f133";
+}
+
 /*================ Common Styles =================*/
 html,
 body {
@@ -146,9 +150,17 @@ body {
   padding: 0 15px;
 }
 
-/* ============= Blocks Styles ==============*/
+/* ================  Datapicker ================== */
+/* ================================================ Blocks Styles =================================================*/
 /* =========== header ============== */
 .header {
+  z-index: 999;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  border-bottom: 1px solid #ede6e6;
   height: 80px;
   font-weight: 500;
   font-size: 14px;
@@ -198,6 +210,9 @@ body {
   color: #4FAEAB;
 }
 .header .burger {
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -221,7 +236,198 @@ body {
       -ms-transform: translateX(0);
           transform: translateX(0);
 }
+.header .rotate {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
 
+.hidden {
+  overflow: hidden;
+}
+
+/* ============ Discover =========== */
+.discover {
+  margin-top: 80px;
+  height: 1080px;
+  padding-top: 115px;
+  background-image: url("../images/discover-bg.png"), url("../images/discover-helm.png");
+  background-position: center, bottom;
+  background-size: contain, 28%;
+  background-repeat: no-repeat;
+}
+.discover__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.discover__left-header {
+  max-width: 450px;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 77px;
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+  color: #000000;
+}
+.discover__left-header .white {
+  color: #fff;
+}
+.discover__left-body {
+  max-width: 580px;
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+}
+.discover__right {
+  max-width: 440px;
+  padding: 34px 47px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.04), 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.04), 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.discover__right-header {
+  margin-bottom: 35px;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 43px;
+  color: #000000;
+}
+.discover__label {
+  margin-bottom: 7px;
+  display: block;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: 21px;
+  color: #BDBDBD;
+}
+.discover .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+.discover__submit {
+  padding: 14px 24px;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: #4FAEAB;
+  -webkit-box-shadow: 0px 8px 16px rgba(79, 174, 171, 0.2);
+          box-shadow: 0px 8px 16px rgba(79, 174, 171, 0.2);
+  border-radius: 5px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.discover__select, .discover__date {
+  background-color: #fff;
+  padding: 15px 9px;
+  width: 100%;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+  outline: none;
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+          appearance: none !important;
+}
+.discover__select:focus, .discover__date:focus {
+  border-color: #4FAEAB;
+}
+.discover__select, .discover__date, .discover__option {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+}
+.discover .form__row {
+  position: relative;
+}
+.discover .form__row::after {
+  position: absolute;
+  content: "\f107";
+  font-family: "icomoon";
+  font-size: 45px;
+  color: #4FAEAB;
+  right: 10px;
+  top: 40%;
+  width: 40px;
+  background-color: white;
+}
+.discover .form__row:last-child:after, .discover .form__row:nth-child(2):after {
+  display: none;
+}
+.discover .fa-solid {
+  position: absolute;
+  font-size: 30px;
+  color: #4FAEAB;
+  right: 10px;
+  top: 47%;
+  width: 40px;
+  background-color: white;
+}
+
+/* ================ Media Query ===============*/
+@media (max-width: 1320px) {
+  .discover__left .white {
+    color: #000000;
+  }
+}
+@media (max-width: 1145px) {
+  .discover__left {
+    text-align: center;
+  }
+  .discover__left .white {
+    color: #4FAEAB;
+  }
+  .discover__left-header {
+    max-width: 550px;
+  }
+  .discover__left-body {
+    margin-bottom: 20px;
+  }
+  .discover__right {
+    max-width: 902px;
+  }
+  .discover__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (max-width: 1044px) {
+  .discover {
+    max-height: 1000px;
+    padding-top: 40px;
+    background-size: cover, 28%;
+  }
+  .discover__left-body {
+    color: #fff;
+  }
+  .discover__left-header .white {
+    color: #fff;
+  }
+}
 @media (max-width: 830px) {
   .burger {
     display: -webkit-box !important;
@@ -244,7 +450,7 @@ body {
             flex-direction: column;
     background-color: #4FAEAB;
     width: 75%;
-    height: 100%;
+    height: 100vh;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -255,6 +461,26 @@ body {
   }
   .header__menu .header__link {
     color: #000000;
+  }
+}
+@media (max-width: 768px) {
+  .discover__left-header {
+    margin: 0 auto;
+    line-height: 47px;
+    font-size: 39px;
+  }
+  .discover__left-body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 380px) {
+  .discover__left-header {
+    margin: 0 auto;
+    line-height: 40px;
+    font-size: 25px;
+  }
+  .discover__left-body {
+    font-size: 12px;
   }
   .header__buttons {
     -webkit-transition: 0.3s all;

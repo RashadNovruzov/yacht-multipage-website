@@ -55,9 +55,11 @@ function styles() {
         .pipe(browserSync.stream())
 }
 
+
 function scripts() {
     return src([
             'node_modules/jquery/dist/jquery.js',
+            'node_modules/flatpickr/dist/flatpickr.min.js',
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))
@@ -68,6 +70,7 @@ function scripts() {
 
 function build() {
     return src([
+        'app/css/flatpickr.min.css',
         'app/css/style.css',
         'app/css/style.min.css',
         'app/fonts/**/*',

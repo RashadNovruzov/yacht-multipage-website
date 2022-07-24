@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/flatpickr.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Yacht Website</title>
 </head>
@@ -37,7 +39,55 @@
                 </div>
             </div>
         </header>
-        <main class="main"></main>
+        <main class="main">
+            <section class="discover">
+                <div class="discover__container">
+                    <div class="discover__inner">
+                        <div class="discover__left">
+                            <div class="discover__left-header">Discover Dubai <span class="white">In new Way</span></div>
+                            <div class="discover__left-body">More than 40,000 private yacht rentals and bareboat charters near me and worldwide for your next boating trip</div>
+                        </div>
+                        <div class="discover__right">
+                            <div class="discover__header discover__right-header">The best solution for your yacht charter</div>
+                            <form action="#" class="discover__form form">
+                                <div class="form__row">
+                                    <label for="discover__city" class="discover__label">Select a City</label>
+                                    <select name="city" id="discover_city" class="discover__select discover__city">
+                                        <option value="Dubai" class="discover__option">Dubai</option>
+                                        <option value="Dubai" class="discover__option">Dubai</option>
+                                        <option value="Dubai" class="discover__option">Dubai</option>
+                                        <option value="Dubai" class="discover__option">Dubai</option>
+                                        <option value="Dubai" class="discover__option">Dubai</option>
+                                    </select>
+                                </div>
+
+                                <div class="form__row">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <label  for="discover__date" class="discover__label">Starting Date</label>
+                                    <input type="text"  class="discover__date" placeholder="Add your dates" id="discover__date">
+                                </div>
+
+                                <div class="form__row">
+                                    <label for="discover__city" class="discover__label">Duration per hours</label>
+                                    <select name="city" id="discover_city" class="discover__select discover__city">
+                                        <option value="nothing" selected disabled class="discover__option">Duration per hours</option>
+                                        <option value="Dubai" class="discover__option">Dubai</option>
+                                        <option value="Dubai" class="discover__option">Dubai</option>
+                                        <option value="Dubai" class="discover__option">Dubai</option>
+                                        <option value="Dubai" class="discover__option">Dubai</option>
+                                        <option value="Dubai" class="discover__option">Dubai</option>
+                                    </select>
+                                </div>
+
+                                <div class="form__row">
+                                    <input type="submit" value="Find My a Boat" class="discover__submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
         <footer class="footer"></footer>
     </div>
 

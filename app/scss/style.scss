@@ -9,11 +9,20 @@
 /*================ Common Styles =================*/
 @import "global";
 
-/* ============= Blocks Styles ==============*/
+/* ================  Datapicker ================== */
+
+/* ================================================ Blocks Styles =================================================*/
 
 
 /* =========== header ============== */
 .header{
+    z-index: 999;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    border-bottom: 1px solid #ede6e6;
     height: 80px;
     font-weight: 500;
     font-size: 14px;
@@ -55,6 +64,7 @@
     }
 
     .burger{
+        transition: 0.3s all;
         display: none;
         flex-direction: column;
         &:hover{
@@ -74,10 +84,157 @@
     .visible{
         transform: translateX(0);
     }
+
+    .rotate{
+        transform: rotate(-90deg);
+    }
+
+}
+
+.hidden{
+    overflow: hidden;
+}
+/* ============ Discover =========== */
+.discover{
+    margin-top: 80px;
+    height: 1080px;
+    padding-top:115px;
+    background-image: url("../images/discover-bg.png"),url("../images/discover-helm.png");
+    background-position: center,bottom;
+    background-size: contain,28%;
+    background-repeat: no-repeat;
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left-header{
+        max-width: 450px;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 77px;
+        letter-spacing: 1.2px;
+        text-transform: capitalize;
+        color: #000000;
+        .white{
+            color: #fff;
+        }
+    }
+
+    &__left-body{
+        max-width: 580px;
+        font-size: 18px;
+        line-height: 35px;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+    }
+
+    &__right{
+        max-width: 440px;
+        padding: 34px 47px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.04), 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        &-header{
+            margin-bottom: 35px;
+            font-family: 'Poppins';
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 43px;
+            color: #000000;
+        }
+    }
+
+    &__label{
+        margin-bottom: 7px;;
+        display: block;
+        font-family: 'Poppins';
+        font-weight: 500;
+        line-height: 21px;
+        color: #BDBDBD;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+    }
+
+    &__submit{
+        padding: 14px 24px;
+        border: none;
+        outline: none;
+        width: 100%;
+        background-color: #4FAEAB;
+        box-shadow: 0px 8px 16px rgba(79, 174, 171, 0.2);
+        border-radius: 5px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    &__select,&__date {
+        background-color: #fff;
+        padding: 15px 9px;
+        width: 100%;
+        border: 1px solid #E0E0E0;
+        border-radius: 5px;
+        outline: none;
+        &:focus{
+            border-color: $main-color;
+        }
+        appearance: none !important;
+    }
+
+    
+
+    &__select,&__date,&__option{ 
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+    }
+    
+
+    .form__row{
+        position: relative;
+    }
+    .form__row::after{
+        position: absolute;
+        content: "\f107";
+        font-family: 'icomoon';
+        font-size: 45px;
+        color: $main-color;
+        right: 10px;
+        top: 40%;
+        width: 40px;
+        background-color: white;
+    }
+
+    .form__row:last-child:after,.form__row:nth-child(2):after{
+        display: none;
+    }
+    
+    .fa-solid{
+        position: absolute;
+        font-size: 30px;
+        color: $main-color;
+        right: 10px;
+        top: 47%;
+        width: 40px;
+        background-color: white;
+    }
+    
+
+    
+    
 }
 
 
-
-
-
+/* ================ Media Query ===============*/
 @import "media-query";
