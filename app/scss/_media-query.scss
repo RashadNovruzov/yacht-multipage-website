@@ -30,7 +30,20 @@
     }
 }
 
-@media screen and (max-width:1044px) {
+@media (max-width:1044px) {
+    .deals{
+        padding-top: 150px;
+        &__items{
+            flex-direction: row;
+            gap:0px;
+            justify-content: space-around;
+        }
+        &__row{
+            gap:30px;
+            flex-direction: column;
+        }
+    }
+    
     .discover{
         max-height: 1000px;
         padding-top: 40px;
@@ -73,6 +86,12 @@
 }
 
 @media (max-width:768px){
+    .deals{
+        &__items{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
     .discover__left-header{
         margin: 0 auto;
         line-height: 47px;
