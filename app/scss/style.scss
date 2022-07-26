@@ -355,5 +355,23 @@
         color: #4FAEAB;
     }
 }
+
+
+/* ============== Carousel ================== */
+.carousel{
+    padding-top: 155px;
+    &__header{
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 52px;
+        text-align: center;
+        color: #222224;
+    }
+} 
+
+
+
+
 /* ================ Media Query ===============*/
 @import "media-query";

@@ -519,6 +519,19 @@ body {
   color: #4FAEAB;
 }
 
+/* ============== Carousel ================== */
+.carousel {
+  padding-top: 155px;
+}
+.carousel__header {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 52px;
+  text-align: center;
+  color: #222224;
+}
+
 /* ================ Media Query ===============*/
 @media (max-width: 1320px) {
   .discover__left .white {

@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     $('.burger').click(function () {
         $(".header__menu, .header__buttons").toggleClass('visible');
@@ -7,6 +8,4 @@ $(document).ready(function(){
 
     $('#discover__date').flatpickr();
 });
-
-
 
