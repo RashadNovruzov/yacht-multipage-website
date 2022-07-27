@@ -93,6 +93,12 @@
 .hidden{
     overflow: hidden;
 }
+
+
+
+
+
+
 /* ============ Discover =========== */
 .discover{
     margin-top: 80px;
@@ -233,11 +239,9 @@
         width: 40px;
         background-color: white;
     }
-    
-
-    
-    
 }
+
+
 
 
 /* ============== Deals ================= */
@@ -359,6 +363,8 @@
 }
 
 
+
+
 /* ============== Carousel ================== */
 .carousel{
     padding-top: 155px;
@@ -410,9 +416,77 @@
         } 
     }
 } 
-@import "_slick";
+@import "slick";
 @import "slider";
 
+
+/* ============================= Blog ======================= */
+
+.blog{
+    padding-top: 200px;
+    padding-bottom: 60px;
+    &__item{
+        padding-bottom: 40px;
+    }
+    &__header{
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 54px;
+        text-align: center;
+        color: #000000;
+        padding-bottom: 60px;
+        .blog__blue{
+            color: $main-color;
+        }
+    }
+
+    &__text{
+        display: inline-block;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        color: #222222;
+        max-width: 270px;
+    }
+
+    &__date{
+        line-height: 26px;
+        color: #999999;
+    }
+
+    &__container{
+        padding-right: 0px;
+    }
+    .slick-dots li button{
+        font-size: 0px;
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-color: #c5c3c3;
+        padding: 0px;
+        border: none;
+        outline: none;
+        transition: 0.2s all;
+    }
+    .slick-dots li{
+        display: inline-block;
+        
+    }
+    
+    .slick-dots{
+        text-align: center
+    }
+    .slick-dots li.slick-active button{
+        width: 14px;
+        height: 14px;
+        background-color: $main-color;
+    }
+}
 
 
 /* ================ Media Query ===============*/

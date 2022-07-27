@@ -729,6 +729,70 @@ body {
   gap: 9px;
 }
 
+/* ============================= Blog ======================= */
+.blog {
+  padding-top: 200px;
+  padding-bottom: 60px;
+}
+.blog__item {
+  padding-bottom: 40px;
+}
+.blog__header {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 54px;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 60px;
+}
+.blog__header .blog__blue {
+  color: #4FAEAB;
+}
+.blog__text {
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: #222222;
+  max-width: 270px;
+}
+.blog__date {
+  line-height: 26px;
+  color: #999999;
+}
+.blog__container {
+  padding-right: 0px;
+}
+.blog .slick-dots li button {
+  font-size: 0px;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #c5c3c3;
+  padding: 0px;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.blog .slick-dots li {
+  display: inline-block;
+}
+.blog .slick-dots {
+  text-align: center;
+}
+.blog .slick-dots li.slick-active button {
+  width: 14px;
+  height: 14px;
+  background-color: #4FAEAB;
+}
+
 /* ================ Media Query ===============*/
 @media (max-width: 1320px) {
   .discover__left .white {
@@ -778,6 +842,9 @@ body {
   }
 }
 @media (max-width: 1100px) {
+  .blog__item {
+    margin-right: 15px;
+  }
   .carousel__header {
     font-size: 26px;
   }
@@ -902,6 +969,12 @@ body {
   }
 }
 @media (max-width: 480px) {
+  .blog__header {
+    font-size: 24px;
+  }
+  .blog__text {
+    font-size: 14px;
+  }
   .carousel__header {
     text-align: center;
     font-size: 34px;
