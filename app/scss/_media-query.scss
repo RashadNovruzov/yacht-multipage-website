@@ -2,9 +2,26 @@
     .discover__left .white{
         color: #000000;
     }
+    .slider{
+        width: 900px;
+    }
+}
+@media (max-width:1245px){
+    .slider{
+        width: 840px;
+    }
 }
 
+@media(max-width:1160px){
+    .slider{
+        width: 827px;
+    }
+    .carousel__inner{
+        max-width: 207px;
+    }
+}
 @media (max-width:1145px){
+    
     .discover{
         &__left{
             text-align: center;
@@ -27,6 +44,43 @@
     .discover__inner{
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (max-width:1100px){
+    .carousel__header{
+        font-size: 26px;
+    }
+    .carousel__body{
+        font-size: 12px;
+    }
+    .carousel__inner{
+        max-width: 158px;
+    }
+}
+
+@media (max-width:1056px){
+    .carousel__container{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .carousel__inner{
+        max-width: 100%;
+    }
+    .carousel__header{
+        font-size: 43px;
+        margin: 0;
+    }
+    .carousel__link{
+        text-align: right;
+    }
+    .slider{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .carousel__body{
+        text-align: center;
+        margin: 0;
     }
 }
 
@@ -101,7 +155,15 @@
         font-size: 14px;
     }
 }
-
+@media (max-width:480px){
+    .carousel__header{
+        text-align: center;
+        font-size: 34px;
+    }
+    .carousel__inner{
+        margin: 0 auto;
+    }
+}
 @media (max-width:380px){
     .discover__left-header{
         margin: 0 auto;
@@ -123,6 +185,17 @@
         z-index: 60;
         .header__help,.header__language,.header__language::before,.header__login{
             color: #000000;
+        }
+    }
+}
+@media (max-width:350px){
+    .carousel__header{
+        font-size: 28px;
+    }
+    .deals__column{
+        max-width: 300px;
+        .deals-column__image{
+            max-width: 300px;
         }
     }
 }
