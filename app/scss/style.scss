@@ -16,7 +16,7 @@
 /* =========== header ============== */
 .header{
     z-index: 999;
-    background-color: #fff;
+    background-color: #000000;
     position: fixed;
     top: 0;
     left: 0;
@@ -346,6 +346,8 @@
         
     }
     &__more{
+        display: inline-block;
+        margin: 0 auto;
         text-align: center;
         font-family: 'Poppins';
         font-weight: 500;
@@ -365,11 +367,51 @@
         font-weight: 700;
         font-size: 35px;
         line-height: 52px;
-        text-align: center;
+        text-align: left;
         color: #222224;
+        margin-bottom: 87px;
+    }
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+    }
+    &__inner{
+        height: 100%;
+        max-width: 245px;
+        display: flex;
+        margin-right: 50px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__body{
+        font-family: 'Poppins';
+        line-height: 170%;
+        letter-spacing: 0.01em;
+        color: #23262F;
+        margin-bottom: 48px;
+    }
+
+    &__link{
+        font-family: 'Poppins';
+        font-weight: 500;
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        text-decoration-line: underline;
+        color: #23262F;
+        transition:  0.3s all;
+        &:after{
+            content: "\f101";
+            font-family: 'icomoon';
+        }
+        &:hover{
+            padding-left: 20px;
+        } 
     }
 } 
-
+@import "_slick";
+@import "slider";
 
 
 
