@@ -368,6 +368,7 @@
 /* ============== Carousel ================== */
 .carousel{
     padding-top: 155px;
+    padding-bottom: 70px;
     &__header{
         font-family: 'Poppins';
         font-weight: 700;
@@ -423,7 +424,8 @@
 /* ============================= Blog ======================= */
 
 .blog{
-    padding-top: 200px;
+    background-color:#FEFCFB;
+    padding-top: 130px;
     padding-bottom: 60px;
     &__item{
         padding-bottom: 40px;
@@ -488,6 +490,112 @@
     }
 }
 
+
+/* =================== Questions ==============*/
+.questions{
+    padding-top: 80px;
+    &__title{
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        text-transform: capitalize;
+        color: #212121;
+        margin-bottom: 16px;
+    }
+    &__text{
+        
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        text-transform: capitalize;
+        color: #757575;
+    }
+    &__header,
+    &__items{
+        max-width: 930px;
+        margin: 0 auto; 
+        margin-bottom: 70px;
+        text-align: center;
+    }
+    &__items{
+        margin-bottom: 0px;
+        max-width: 830px;
+        text-align: left;
+    }
+    &__item{
+        padding: 20px 15px;
+        padding-left: 0px;
+    }
+
+    &__body{
+        &:hover{
+            cursor: pointer;
+        }
+        margin-bottom: 24px;
+        padding-left: 55px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: capitalize;
+        color: #000000;
+        position: relative;
+        .plus{
+            
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            span{
+                transition: 0.3s all;
+                top: 0;
+                left: 0;
+                position: absolute;
+                display: inline-block;
+                width: 16px;
+                height: 2px;
+                background-color: $main-color;
+                border-radius: 4px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            &__vertical{
+                transform: rotate(90deg)
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        transition: 0.3s all;
+    }
+    &__answer{
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        padding-left: 75px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: #333333;
+        transition: 0.3s all;
+        height: 0;
+    }
+
+    .visible{
+        transform: translateY(0);
+        opacity: 1;
+        height: auto;
+        visibility: visible;
+    }
+    .hide{
+        opacity: 0
+    }
+    .rotate{
+        transform: rotate(0deg)
+    }
+}
 
 /* ================ Media Query ===============*/
 @import "media-query";

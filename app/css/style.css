@@ -524,6 +524,7 @@ body {
 /* ============== Carousel ================== */
 .carousel {
   padding-top: 155px;
+  padding-bottom: 70px;
 }
 .carousel__header {
   font-family: "Poppins";
@@ -731,7 +732,8 @@ body {
 
 /* ============================= Blog ======================= */
 .blog {
-  padding-top: 200px;
+  background-color: #FEFCFB;
+  padding-top: 130px;
   padding-bottom: 60px;
 }
 .blog__item {
@@ -791,6 +793,123 @@ body {
   width: 14px;
   height: 14px;
   background-color: #4FAEAB;
+}
+
+/* =================== Questions ==============*/
+.questions {
+  padding-top: 80px;
+}
+.questions__title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+  color: #212121;
+  margin-bottom: 16px;
+}
+.questions__text {
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+  color: #757575;
+}
+.questions__header, .questions__items {
+  max-width: 930px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  text-align: center;
+}
+.questions__items {
+  margin-bottom: 0px;
+  max-width: 830px;
+  text-align: left;
+}
+.questions__item {
+  padding: 20px 15px;
+  padding-left: 0px;
+}
+.questions__body {
+  margin-bottom: 24px;
+  padding-left: 55px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: #000000;
+  position: relative;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.questions__body:hover {
+  cursor: pointer;
+}
+.questions__body .plus {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.questions__body .plus span {
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  background-color: #4FAEAB;
+  border-radius: 4px;
+}
+.questions__body .plus span:hover {
+  cursor: pointer;
+}
+.questions__body .plus__vertical {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.questions__body .plus:hover {
+  cursor: pointer;
+}
+.questions__answer {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  padding-left: 75px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #333333;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  height: 0;
+}
+.questions .visible {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+}
+.questions .hide {
+  opacity: 0;
+}
+.questions .rotate {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 /* ================ Media Query ===============*/
@@ -915,6 +1034,22 @@ body {
   }
 }
 @media (max-width: 830px) {
+  .questions__item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .questions__title {
+    font-size: 42px;
+  }
+  .questions__text {
+    font-size: 16px;
+  }
+  .questions__body {
+    font-size: 16px;
+  }
+  .questions__answer {
+    font-size: 14px;
+  }
   .burger {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -950,6 +1085,27 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .caarousel,
+.blog,
+.questions {
+    padding-top: 60px;
+  }
+  .questions__item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .questions__title {
+    font-size: 36px;
+  }
+  .questions__text {
+    font-size: 13px;
+  }
+  .questions__body {
+    font-size: 13px;
+  }
+  .questions__answer {
+    font-size: 11px;
+  }
   .deals__items {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

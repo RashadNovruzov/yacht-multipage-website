@@ -118,6 +118,22 @@
     }
 }
 @media (max-width:830px){
+    .questions__item{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .questions__title{
+        font-size: 42px;
+    }
+    .questions__text{
+        font-size: 16px;
+    }
+    .questions__body{
+        font-size: 16px;
+    }
+    .questions__answer{
+        font-size: 14px;
+    }
     .burger{
         display: flex !important;
     }
@@ -145,6 +161,27 @@
 }
 
 @media (max-width:768px){
+    .caarousel,
+    .blog,
+    .questions{
+        padding-top: 60px;
+    }
+    .questions__item{
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .questions__title{
+        font-size: 36px;
+    }
+    .questions__text{
+        font-size: 13px;
+    }
+    .questions__body{
+        font-size: 13px;
+    }
+    .questions__answer{
+        font-size: 11px;
+    }
     .deals{
         &__items{
             flex-direction: column;

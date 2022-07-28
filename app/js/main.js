@@ -107,4 +107,19 @@ $(document).ready(function () {
             },
         ]
     });
+
+    
+
+    // $(".plus").on('click',function(){// если хотите ответ открылся при нажатие на +
+    //     $(this).parents(".questions__body").next().toggleClass('visible');
+    //     $(this).find(".plus__horizont").toggleClass("hide");
+    //     $(this).find(".plus__vertical").toggleClass("rotate");
+    // })
+    
+    $(".questions__body").on('click',function(){// усли хотите ответ открылся при нажатие на +
+        $(this).next(".questions__answer").toggleClass('visible');
+        $(this).find(".plus__horizont").toggleClass("hide");
+        $(this).find(".plus__vertical").toggleClass("rotate");
+    })
+
 });
