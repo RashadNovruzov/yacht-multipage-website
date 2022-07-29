@@ -21,6 +21,11 @@
     }
 }
 @media (max-width:1145px){
+    .footer{
+        &__input{
+            max-width: 83% !important;
+        }
+    }
     
     .discover{
         &__left{
@@ -65,6 +70,12 @@
 }
 
 @media (max-width:1056px){
+    .footer__top{
+        gap: 57px;
+    }
+    .footer-side{
+        gap:76px
+    }
     .carousel__container{
         flex-direction: column;
         gap: 30px;
@@ -117,6 +128,30 @@
         background-size: cover,28%;
     }
 }
+
+@media (max-width:1025px){
+    .footer{
+        position: static;
+        max-height: 1200px;
+        height: 100%;
+        background-image: url("../images/footer_clouds.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 100%;
+        background-color: #4FAEAB;
+        padding-bottom: 70px;
+        &__inner{
+            padding-top: 100px;
+        }
+        .form__inner button{
+            background-color: #4FAEFD;
+        }
+        &__inner{
+            position: static;
+            padding-top: 221px;
+        }
+    }
+}
 @media (max-width:830px){
     .questions__item{
         padding-top: 10px;
@@ -161,6 +196,21 @@
 }
 
 @media (max-width:768px){
+    .footer__bottom{
+        justify-content: space-between;
+        .footer__logo{
+            display: none;
+        }
+        .footer__menu{
+            flex: 1 1 auto;
+        }
+    }
+    .footer-side__text{
+        font-size: 12px;
+    }
+    .footer-side__header{
+        font-size: 14px;
+    }
     .caarousel,
     .blog,
     .questions{
@@ -197,7 +247,35 @@
         font-size: 14px;
     }
 }
+
+@media (max-width:643px){
+    .footer__top{
+        flex-direction: column;
+        .footer-side{
+            gap:275px;
+        }
+    }
+}
+
+@media (max-width:570px){
+    .footer-side{
+        &:first-child{
+            gap: 200px;
+        }
+        gap:130px
+    }
+}
 @media (max-width:480px){
+    .footer__bottom{
+        flex-direction: column;
+        gap:30px;
+    }
+    .footer-side{
+        &:first-child{
+            gap: 130px m !important;
+        }
+        gap:95px !important;
+    }
     .blog__header{
         font-size: 24px;
     }
@@ -213,6 +291,15 @@
     }
 }
 @media (max-width:380px){
+    .footer-side{
+        &:first-child{
+            gap: 62px;
+        }
+        gap:65px;
+        .text{
+            font-size: 9px;
+        }
+    }
     .discover__left-header{
         margin: 0 auto;
         line-height: 40px;

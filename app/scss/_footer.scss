@@ -1,0 +1,114 @@
+.footer{
+    height: 1217px;
+    background-image: url("../images/footer_clouds.png"),url("../images/footer_gradient.png"),url("../images/footer_body.png");
+    background-repeat: no-repeat;
+    background-position: top,bottom,center;
+    background-size: 100%;
+    position: relative;
+    &__top{
+        padding-bottom: 13px;
+        border-bottom: 2px solid #fff;
+        border-radius: 2px;
+    }
+    &-side__header{
+        font-weight: 700;
+        line-height: 28px;
+        color: #FFFFFF;
+        margin-bottom: 15px;
+    }
+
+    &-side__text{
+        margin-bottom: 13px;
+        line-height: 19px;
+        color: #FFFFFF;
+        opacity: 0.5;
+        max-width: 347px;
+        cursor: pointer;
+        
+    }
+    &-side{
+        .text{
+            cursor: auto;
+        }
+        .form__inner{
+            padding-bottom: 13px;
+            position: relative;
+            button{
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                outline: none;
+                border: none;
+                border-radius: 6px;
+                background-color: $main-color;
+                height: 45px;
+                width: 50px;
+                color: #fff;
+                font-size: 36px;
+                font-weight: 900;
+                padding-top: 0px;
+            }
+        }
+        input{
+            padding-left: 10px;
+            border: none;
+            outline: none;
+            background-color: #fff;
+            border-radius: 6px;
+            height: 45px;
+            max-width: 327px;
+            width: 100%;  
+        }
+    }
+    &__inner{
+        position: absolute;
+        bottom: 75px;
+    }
+    &__top{
+        display: flex;
+        gap: 125px;
+    }
+    &-side{
+        display: flex;
+        gap: 125px;        
+    }
+
+    &__bottom{
+        padding-top: 47px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footer__menu{
+            display: flex;
+            gap: 35px;
+            &-item{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                color: #FFFFFF;
+                
+            }
+        }
+
+        .footer__icons a{
+            margin-right: 15px;
+            padding: 9px;
+            border-radius: 50%;
+            border: 1px solid rgba($color: #fff, $alpha: 0.5);
+            &:nth-child(2){
+                padding: 10px 13px;
+                padding-bottom: 9px;
+            }
+            &:last-child{
+                padding: 10px;
+                padding-bottom: 8px;
+                margin: 0;
+            }
+        }
+        .icon{
+            font-size: 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+    }
+}
