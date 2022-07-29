@@ -176,6 +176,12 @@ body {
 }
 .header__link {
   color: #BDBDBD;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.header__link:hover {
+  color: #333333;
 }
 .header__menu {
   display: -webkit-box;
@@ -197,9 +203,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 25px;
-}
-.header .active__link {
-  color: #333333;
 }
 .header__login {
   color: #4FAEAB;

@@ -37,6 +37,22 @@ function images() {
         .pipe(dest('dist/images'))
 }
 
+function yachts_images() {
+    return src('app/yachts/images/**/*')
+        .pipe(imagemin([
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.mozjpeg({ quality: 75, progressive: true }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
+        .pipe(dest('dist/yachts/images'))
+}
+
 function styles() {
     return src('app/scss/style.scss')
         .pipe(scss({ outputStyle: 'expanded' }))
@@ -55,6 +71,24 @@ function styles() {
         .pipe(browserSync.stream())
 }
 
+function yachts_styles() {
+    return src('app/yachts/scss/style.scss')
+        .pipe(scss({ outputStyle: 'expanded' }))
+        .pipe(concat('style.css'))
+        .pipe(autoPrefixer({
+            overrideBrowserslist: ['last 10 version']
+        }))
+        .pipe(dest('app/yachts/css'))
+        .pipe(scss({ outputStyle: 'compressed' }))
+        .pipe(concat('style.min.css'))
+        .pipe(autoPrefixer({
+            overrideBrowserslist: ['last 10 version'],
+            grid: true
+        }))
+        .pipe(dest('app/yachts/css/'))
+        .pipe(browserSync.stream())
+}
+
 
 function scripts() {
     return src([
@@ -69,6 +103,18 @@ function scripts() {
         .pipe(browserSync.stream())
 }
 
+function yachts_scripts() {
+    return src([
+            'node_modules/jquery/dist/jquery.js',
+            'node_modules/flatpickr/dist/flatpickr.min.js',
+            'app/yachts/js/main.js',
+        ])
+        .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(dest('app/yachts/js'))
+        .pipe(browserSync.stream())
+}
+
 function build() {
     return src([
         'app/css/flatpickr.min.css',
@@ -77,6 +123,10 @@ function build() {
         'app/fonts/**/*',
         'app/js/main.min.js',
         'app/*.html',
+        'app/yachts/css/style.css',
+        'app/yachts/js/main.min.js',
+        'app/yachts/*.html',
+        'app/yachts/css/style.min.css'
     ], { base: 'app' })
 
     .pipe(dest('dist'))
@@ -84,8 +134,12 @@ function build() {
 
 function watching() {
     watch(['app/scss/**/*.scss'], styles)
+    watch(['app/scss/**/*.scss'], yachts_styles)
+    watch(['app/yachts/scss/**/*.scss'], yachts_styles)
     watch(['app/js/main.js'], scripts)
+    watch(['app/yachts/js/main.js'], yachts_scripts)
     watch(['app/*.html']).on('change', browserSync.reload)
+    watch(['app/yachts/*.html']).on('change', browserSync.reload)
 }
 
 exports.styles = styles;
@@ -96,5 +150,10 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = build;
 
-exports.series = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching); // чтобы все эти функции выполнялись вместе консоль не был занят только слежением или обновляением браузера
+// Yachts
+exports.yachts_styles = yachts_styles;
+exports.yachts_scripts = yachts_scripts;
+exports.yachts_images = yachts_images;
+//////////////////////////////////
+exports.series = series(cleanDist, images,yachts_images, build);
+exports.default = parallel(yachts_styles,yachts_scripts,styles, scripts, browsersync, watching); // чтобы все эти функции выполнялись вместе консоль не был занят только слежением или обновляением браузера
