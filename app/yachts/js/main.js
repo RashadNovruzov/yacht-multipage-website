@@ -7,4 +7,10 @@ $(document).ready(function(){
     })
 
     // alert(window.innerHeight);
+    $(".form__date").flatpickr();
+
+
+    $('.s-label').click(function(){
+        $(this).next('.select-wrapper').find('.form__select').filter(":selected");
+    })
 })

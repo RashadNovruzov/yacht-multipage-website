@@ -9,7 +9,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="../css/flatpickr.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Document</title>
+    <title>Yachts' List</title>
 </head>
 <body>
     
@@ -19,7 +19,7 @@
                 <div class="header__inner">
                     <a href="#" class="header__logo"><img src="../images/logo.png" alt=""></a>
                     <nav class="header__menu">
-                        <a href="" class="header__link active__link">Home</a>
+                        <a href="../index.html" class="header__link active__link">Home</a>
                         <a href="#marinas" class="header__link">Marinas</a>
                         <a href="#offers" class="header__link">Offers</a>
                         <a href="#gallary" class="header__link">Gallary</a>
@@ -40,8 +40,47 @@
             </div>
         </header>
         <main class="main">
-            <div class="sidebar"></div>
-            <div class="content">ggkggk</div>
+            <div class="main__form form"> 
+                <div class="form__container">
+                    <form class="form__row" action="#">
+                        <div class="form__column">
+                            <label for="location-select" class="select__label s-label"><div class="label__inner">Location <span class="label__icon"></span></div> </label>
+                            <div class="select-wrapper">
+                                <select name="location" id="location-select" class="form__select">
+                                    <option value="Dubai"  class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Du</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai HJbhjfbhk JHBfhkb</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <label for="date-select"  class="select__label"><div class="label__inner">Date <span class="label__icon"></span></div></label>
+                            <input type="text" placeholder="Add your dates" class="form__date" id="date-select">
+                        </div>
+                        <div class="form__column">
+                            <label for="duration-select"  class="select__label s-label"><div class="label__inner">Duration per hours <span class="label__icon"></span></div></label>
+                            <div class="select-wrapper">
+                                <select name="location" id="duration-select" class="form__select">
+                                    <option value="Dubai" selected disabled class="form__option">Duration per hour</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="sidebar"></div>
+                <div class="content"></div>
+            </div>
+            
         </main>
         <footer class="footer">
             <div class="footer__container">

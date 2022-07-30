@@ -146,6 +146,33 @@ body {
   padding: 0 15px;
 }
 
+.main {
+  margin-top: 132px;
+}
+
+.main-container {
+  padding: 0px 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 80%;
+          flex: 1 1 80%;
+}
+
+.sidebar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+}
+
 /* ======================================================= Block Styles ============================================ */
 /* ========================== Header ============================= */
 .header {
@@ -242,6 +269,88 @@ body {
 
 .hidden {
   overflow: hidden;
+}
+
+/* =========================== Form ============================== */
+.form__container {
+  min-height: 75px !important;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 80px 2px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 2px 80px 2px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+.form__container .form__row {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form__container .form__row .form__date {
+  outline: none;
+  border: none;
+  font-family: "Poppins";
+  font-size: 12px;
+  line-height: 18px;
+  color: #666666;
+}
+.form__container .form__row .select__label {
+  margin-bottom: 10px;
+  display: block;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: 24px;
+  color: #222222;
+}
+.form__container .form__row .select__label .label__inner {
+  display: inline-block;
+  position: relative;
+}
+.form__container .form__row .select__label .label__icon:before {
+  content: "\f107";
+  font-family: "icomoon";
+  color: #4FAEAB;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+.form__container .form__row .form__option {
+  font-family: "Poppins";
+  font-size: 12px;
+  line-height: 18px;
+  color: #666666;
+}
+.form__container .form__row .form__select {
+  border: none;
+  outline: none;
+  font-family: "Poppins";
+  font-size: 12px;
+  line-height: 18px;
+  color: #666666;
+}
+.form__container .form__row .select-wrapper {
+  position: relative;
+}
+.form__container .form__row .select-wrapper select {
+  cursor: pointer;
+  max-width: 280px;
+  padding-right: 25px;
+}
+.form__container .form__row .select-wrapper:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0px !important;
+  background-color: #fff;
+  width: 25px;
+  height: 20px;
+  z-index: 5;
 }
 
 /* ==================================== Footer ==============================*/
@@ -387,6 +496,9 @@ body {
 }
 .footer__icons a {
   border-color: rgba(51, 51, 51, 0.2) !important;
+}
+.footer__inner {
+  position: static !important;
 }
 
 /* ======================================= Media Query ==============================*/
@@ -669,6 +781,17 @@ body {
   }
   .footer-side:first-child {
     gap: 200px;
+  }
+}
+@media (max-width: 540px) {
+  .form__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
   }
 }
 @media (max-width: 480px) {
