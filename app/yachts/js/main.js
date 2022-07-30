@@ -5,4 +5,6 @@ $(document).ready(function(){
         $(this).toggleClass('rotate');
 
     })
+
+    // alert(window.innerHeight);
 })

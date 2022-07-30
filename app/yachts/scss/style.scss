@@ -24,7 +24,33 @@
 
 
 
-
+/* ==================================== Footer ==============================*/
+@import"../../scss/footer";
+.footer{
+    position: static;
+    min-height: 570px;
+    height: 100%;
+    &-side__text,
+    &-side__header,
+    &__menu-item,
+    .icon{
+        color: #333333 !important;
+    }
+    &__input{
+        border: 1px solid #E0E0E0 !important;
+        font-size: 14px;
+        line-height: 17px;
+        color: #333333;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+    }
+    &__button{
+        color: #333333 !important;
+    }
+    &__icons a{
+        border-color: rgba($color: #333333, $alpha: .2) !important;
+    }
+}
 
 /* ======================================= Media Query ==============================*/
 @import "../../scss/media-query";
