@@ -107,6 +107,7 @@ function yachts_scripts() {
     return src([
             'node_modules/jquery/dist/jquery.js',
             'node_modules/flatpickr/dist/flatpickr.min.js',
+            'node_modules/nouislider/dist/nouislider.min.js',
             'app/yachts/js/main.js',
         ])
         .pipe(concat('main.min.js'))

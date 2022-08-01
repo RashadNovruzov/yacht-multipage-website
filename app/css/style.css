@@ -1318,17 +1318,6 @@ body {
     gap: 200px;
   }
 }
-@media (max-width: 540px) {
-  .form__row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start !important;
-        -ms-flex-align: start !important;
-            align-items: flex-start !important;
-  }
-}
 @media (max-width: 480px) {
   .footer__bottom {
     -webkit-box-orient: vertical;
