@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../css/flatpickr.min.css"> 
+    <link rel="stylesheet" href="css/slider.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+
+
+    <title>Yachts' List</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__inner">
+                    <a href="#" class="header__logo"><img src="../images/logo.png" alt=""></a>
+                    <nav class="header__menu">
+                        <a href="../index.html" class="header__link active__link">Home</a>
+                        <a href="#marinas" class="header__link">Marinas</a>
+                        <a href="#offers" class="header__link">Offers</a>
+                        <a href="#gallary" class="header__link">Gallary</a>
+                        <a href="#blog" class="header__link">Blog</a>
+                        <a href="#about-us" class="header__link">About Us</a>
+                    </nav>
+                    <div class="header__buttons">
+                        <a href="#" class="header__login">log in</a>
+                        <a href="#" class="header__help header__link">Help</a>
+                        <a href="#" class="header__language">AR</a>
+                    </div>
+                    <div class="burger">
+                        <div class="burger__line"></div>
+                        <div class="burger__line"></div>
+                        <div class="burger__line"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__form form"> 
+                <div class="form__container">
+                    <form class="form__row" action="#">
+                        <div class="form__column">
+                            <label for="location-select" class="select__label s-label"><div class="label__inner">Location <span class="label__icon"></span></div> </label>
+                            <div class="select-wrapper">
+                                <select name="location" id="location-select" class="form__select">
+                                    <option value="Dubai"  class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Du</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai HJbhjfbhk JHBfhkb</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <label for="date-select"  class="select__label"><div class="label__inner">Date <span class="label__icon"></span></div></label>
+                            <input type="text" placeholder="Add your dates" class="form__date" id="date-select">
+                        </div>
+                        <div class="form__column">
+                            <label for="duration-select"  class="select__label s-label"><div class="label__inner">Duration per hours <span class="label__icon"></span></div></label>
+                            <div class="select-wrapper">
+                                <select name="location" id="duration-select" class="form__select">
+                                    <option value="Dubai" selected disabled class="form__option">Duration per hour</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                    <option value="Dubai" class="form__option">Dubai</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="more__filter">More Filter...</div>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="sidebar">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="sidebar__filter">
+                        <div class="filter__title">Filter</div>
+                        <form action="#" class="filter__form">
+                            <div class="filter__box">
+                                <input type="checkbox" id="checkbox-1" class="filter__checkbox"><label for="checkbox-1"  class="filter__label">Filter</label>
+                            </div>
+                            <div class="filter__box">
+                                <input type="checkbox" id="checkbox-2" class="filter__checkbox"><label for="checkbox-2" class="filter__label">Filter</label>
+                            </div>
+                            <div class="filter__box">
+                                <input type="checkbox" id="checkbox-3" class="filter__checkbox"><label for="checkbox-3" class="filter__label">Filter</label>
+                            </div>
+                            <div class="filter__box">
+                                <input type="checkbox" id="checkbox-4" class="filter__checkbox"><label for="checkbox-4" class="filter__label">Filter</label>
+                            </div>
+                            <div class="filter__box">
+                                <input type="checkbox" id="checkbox-5" class="filter__checkbox"><label for="checkbox-5" class="filter__label">Filter</label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="sidebar__slider">
+                        <div class="slider__title"><span class="slider__text">Price</span><span class="slider__number"> </span></div>
+                        <div id="slider"></div>
+                    </div>
+                    <div class="sidebar__slider">
+                        <div class="slider__title"><span class="slider__text">Boat length</span><span class="slider__lenght"> </span></div>
+                        <div id="slider2"></div>
+                    </div>
+                    <div class="sidebar__check"> 
+                        <input type="checkbox" id="captain" class="check__input">
+                        <label for="captain" class="check__label">With Captain</label> 
+                    </div>
+                    <div class="sidebar__numbers numbers">
+                        <div class="numbers__title">Guests Number</div>
+                        <div class="numbers__buttons"><span id="minus" class="numbers__button">-</span><input type="number" disabled id="numbers__input" value=0  class="numbers__input"><span class="numbers__button" id="plus">+</span></div>
+                    </div>
+                    <div class="sidebar__numbers bedroom">
+                        <div class="numbers__title">Bedroom Number</div>
+                        <div class="numbers__buttons"><span id="b-minus" class="numbers__button">-</span><input type="number" disabled id="bedrooms__input" value=0  class="numbers__input"><span class="numbers__button" id="b-plus">+</span></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="cards">
+                        <a href="../yacht_details/" class="cards__column cards-column">
+                            <div class="cards-column__image">
+                                <img src="../images/azimut-2.png" alt="">
+                                <i class="fa-solid fa-bookmark bookmark"></i>
+                            </div>
+                            <div class="cards-column__body">
+                                <div class="cards-column__header">AZIMUT — 2016 (2016)</div>
+                                <div class="cards-column__functions">
+                                        <span class="cards-column__item">
+                                            <i class="fa-solid fa-location-dot"></i>Location 
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/captain.png"alt=""> With Captain
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/bed.png" alt="">4Bedroom
+                                        </span>
+                                </div>
+                                <div class="cards-column__functions">
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/lenght.png" alt=""> Lenght 
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/guests.png"alt=""> 12 Guests
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/bathrooms.png" alt="">2 bathrooms
+                                    </span>
+                            </div>
+                                <div class="cards-column__stars"><img src="images/stars.png" alt=""></div>
+                                <div class="cards-column__price">From 100$ per day</div>
+                            </div>
+                        </a>
+                        <a href="../yacht_details/" class="cards__column cards-column">
+                            <div class="cards-column__image">
+                                <img src="../images/azimut-8.png" alt="">
+                                <i class="fa-solid fa-bookmark bookmark"></i>
+                            </div>
+                            <div class="cards-column__body">
+                                <div class="cards-column__header">AZIMUT — 2016 (2016)</div>
+                                <div class="cards-column__functions">
+                                        <span class="cards-column__item">
+                                            <i class="fa-solid fa-location-dot"></i>Location 
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/captain.png"alt=""> With Captain
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/bed.png" alt="">4 Bedroom
+                                        </span>
+                                </div>
+                                <div class="cards-column__functions">
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/lenght.png" alt=""> Lenght 
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/guests.png"alt=""> 12 Guests
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/bathrooms.png" alt="">2 bathrooms
+                                    </span>
+                            </div>
+                                <div class="cards-column__stars"><img src="images/stars.png" alt=""></div>
+                                <div class="cards-column__price">From 100$ per day</div>
+                            </div>
+                        </a>
+                        <a href="../yacht_details/" class="cards__column cards-column">
+                            <div class="cards-column__image">
+                                <img src="../images/azimut-7.png" alt="">
+                                <i class="fa-solid fa-bookmark bookmark"></i>
+                            </div>
+                            <div class="cards-column__body">
+                                <div class="cards-column__header">AZIMUT — 2016 (2016)</div>
+                                <div class="cards-column__functions">
+                                        <span class="cards-column__item">
+                                            <i class="fa-solid fa-location-dot"></i>Location 
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/captain.png"alt=""> With Captain
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/bed.png" alt="">4 Bedroom
+                                        </span>
+                                </div>
+                                <div class="cards-column__functions">
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/lenght.png" alt=""> Lenght 
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/guests.png"alt=""> 12 Guests
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/bathrooms.png" alt="">2 bathrooms
+                                    </span>
+                            </div>
+                                <div class="cards-column__stars"><img src="images/stars.png" alt=""></div>
+                                <div class="cards-column__price">From 100$ per day</div>
+                            </div>
+                        </a>
+                        <a href="../yacht_details/" class="cards__column cards-column">
+                            <div class="cards-column__image">
+                                <img src="../images/azimut-9.png" alt="">
+                                <i class="fa-solid fa-bookmark bookmark"></i>
+                            </div>
+                            <div class="cards-column__body">
+                                <div class="cards-column__header">AZIMUT — 2016 (2016)</div>
+                                <div class="cards-column__functions">
+                                        <span class="cards-column__item">
+                                            <i class="fa-solid fa-location-dot"></i>Location 
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/captain.png"alt=""> With Captain
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/bed.png" alt="">4 Bedroom
+                                        </span>
+                                </div>
+                                <div class="cards-column__functions">
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/lenght.png" alt=""> Lenght 
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/guests.png"alt=""> 12 Guests
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/bathrooms.png" alt="">2 bathrooms
+                                    </span>
+                            </div>
+                                <div class="cards-column__stars"><img src="images/stars.png" alt=""></div>
+                                <div class="cards-column__price">From 100$ per day</div>
+                            </div>
+                        </a>
+                        <a href="../yacht_details/" class="cards__column cards-column">
+                            <div class="cards-column__image">
+                                <img src="../images/azimut-5.png" alt="">
+                                <i class="fa-solid fa-bookmark bookmark"></i>
+                            </div>
+                            <div class="cards-column__body">
+                                <div class="cards-column__header">AZIMUT — 2016 (2016)</div>
+                                <div class="cards-column__functions">
+                                        <span class="cards-column__item">
+                                            <i class="fa-solid fa-location-dot"></i>Location 
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/captain.png"alt=""> With Captain
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/bed.png" alt="">4 Bedroom
+                                        </span>
+                                </div>
+                                <div class="cards-column__functions">
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/lenght.png" alt=""> Lenght 
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/guests.png"alt=""> 12 Guests
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/bathrooms.png" alt="">2 bathrooms
+                                    </span>
+                            </div>
+                                <div class="cards-column__stars"><img src="images/stars.png" alt=""></div>
+                                <div class="cards-column__price">From 100$ per day</div>
+                            </div>
+                        </a>
+                        <a href="../yacht_details/" class="cards__column cards-column">
+                            <div class="cards-column__image">
+                                <img src="../images/azimut-4.png" alt="">
+                                <i class="fa-solid fa-bookmark bookmark"></i>
+                            </div>
+                            <div class="cards-column__body">
+                                <div class="cards-column__header">AZIMUT — 2016 (2016)</div>
+                                <div class="cards-column__functions">
+                                        <span class="cards-column__item">
+                                            <i class="fa-solid fa-location-dot"></i>Location 
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/captain.png"alt=""> With Captain
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/bed.png" alt="">4 Bedroom
+                                        </span>
+                                </div>
+                                <div class="cards-column__functions">
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/lenght.png" alt=""> Lenght 
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/guests.png"alt=""> 12 Guests
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/bathrooms.png" alt="">2 bathrooms
+                                    </span>
+                            </div>
+                                <div class="cards-column__stars"><img src="images/stars.png" alt=""></div>
+                                <div class="cards-column__price">From 100$ per day</div>
+                            </div>
+                        </a>
+                        <a href="../yacht_details/" class="cards__column cards-column">
+                            <div class="cards-column__image">
+                                <img src="../images/azimut-3.png" alt="">
+                                <i class="fa-solid fa-bookmark bookmark"></i>
+                            </div>
+                            <div class="cards-column__body">
+                                <div class="cards-column__header">AZIMUT — 2016 (2016)</div>
+                                <div class="cards-column__functions">
+                                        <span class="cards-column__item">
+                                            <i class="fa-solid fa-location-dot"></i>Location 
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/captain.png"alt=""> With Captain
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/bed.png" alt="">4 Bedroom
+                                        </span>
+                                </div>
+                                <div class="cards-column__functions">
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/lenght.png" alt=""> Lenght 
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/guests.png"alt=""> 12 Guests
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/bathrooms.png" alt="">2 bathrooms
+                                    </span>
+                            </div>
+                                <div class="cards-column__stars"><img src="images/stars.png" alt=""></div>
+                                <div class="cards-column__price">From 100$ per day</div>
+                            </div>
+                        </a>
+                        <a href="../yacht_details/" class="cards__column cards-column">
+                            <div class="cards-column__image">
+                                <img src="../images/azimut-1.png" alt="">
+                                <i class="fa-solid fa-bookmark bookmark"></i>
+                            </div>
+                            <div class="cards-column__body">
+                                <div class="cards-column__header">AZIMUT — 2016 (2016)</div>
+                                <div class="cards-column__functions">
+                                        <span class="cards-column__item">
+                                            <i class="fa-solid fa-location-dot"></i>Location 
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/captain.png"alt=""> With Captain
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/bed.png" alt="">4 Bedroom
+                                        </span>
+                                </div>
+                                <div class="cards-column__functions">
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/lenght.png" alt=""> Lenght 
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/guests.png"alt=""> 12 Guests
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/bathrooms.png" alt="">2 bathrooms
+                                    </span>
+                            </div>
+                                <div class="cards-column__stars"><img src="images/stars.png" alt=""></div>
+                                <div class="cards-column__price">From 100$ per day</div>
+                            </div>
+                        </a>
+                        <a href="../yacht_details/" class="cards__column cards-column">
+                            <div class="cards-column__image">
+                                <img src="../images/azimut-6.png" alt="">
+                                <i class="fa-solid fa-bookmark bookmark"></i>
+                            </div>
+                            <div class="cards-column__body">
+                                <div class="cards-column__header">AZIMUT — 2016 (2016)</div>
+                                <div class="cards-column__functions">
+                                        <span class="cards-column__item">
+                                            <i class="fa-solid fa-location-dot"></i>Location 
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/captain.png"alt=""> With Captain
+                                        </span>
+                                        <span class="cards-column__item">
+                                            <img class="icon" src="../images/bed.png" alt="">4 Bedroom
+                                        </span>
+                                </div>
+                                <div class="cards-column__functions">
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/lenght.png" alt=""> Lenght 
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/guests.png"alt=""> 12 Guests
+                                    </span>
+                                    <span class="cards-column__item">
+                                        <img class="icon" src="../images/bathrooms.png" alt="">2 bathrooms
+                                    </span>
+                            </div>
+                                <div class="cards-column__stars"><img src="images/stars.png" alt=""></div>
+                                <div class="cards-column__price">From 100$ per day</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__inner">
+                    <div class="footer__top">
+                        <div class="footer__top-left footer-side">
+                            <div class="footer__column">
+                                <div class="footer-side__header">Sitemap</div>
+                                <div class="footer-side__text">Quam</div>
+                                <div class="footer-side__text">Ridiculus</div>
+                                <div class="footer-side__text">Vestibulum</div>
+                                <div class="footer-side__text">Lorem ipsum</div>
+                                <div class="footer-side__text">Lorem ipsum dolor sit amet</div>
+                                <div class="footer-side__text">Magna malesuda</div>
+                            </div>
+                            <div class="footer__column">
+                                <div class="footer-side__header">Help</div>
+                                <div class="footer-side__text">About Us</div>
+                                <div class="footer-side__text">Contact Us</div>
+                                <div class="footer-side__text">FAQ</div>
+                            </div>
+                        </div>
+                        <div class="footer__top-right footer-side">
+                            <div class="footer__column">
+                                <div class="footer-side__header">Company</div>
+                                <div class="footer-side__text">Id maecenas</div>
+                                <div class="footer-side__text">Id orc</div>
+                                <div class="footer-side__text">Magna ultricies</div>
+                                <div class="footer-side__text">Quis risus</div>
+                            </div>
+                            <div class="footer__column">
+                                <div class="footer-side__header">Subscibe</div>
+
+                                <form class="footer__form" action="#">
+                                    <div class="form__inner">
+                                        <input type="text" class="footer__input">
+                                        <button class="footer__button" type="submit">&#8250</button>
+                                    </div>
+                                </form>
+
+                                <div class="footer-side__text text">
+                                    Nascetur aenean sapien, integer sit. Diam eleifend nunc vel,
+                                    scelerisque aliquam, sed blandit. Ullamcorper varius ante bibendum pulvinar et
+                                    quisque neque. Ut tempus neque, bibendum egestas nisl enim at condimentum vitae.
+                                    Natoque.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__bottom">
+                        <a href="#" class="footer__logo"><img src="../images/logo.png" alt=""></a>
+                        <div class="footer__menu">
+                            <a href="#">
+                                <div class="footer__menu-item">Terms</div>
+                            </a>
+                            <a href="#">
+                                <div class="footer__menu-item">Privacy</div>
+                            </a>
+                            <a href="#">
+                                <div class="footer__menu-item">Cookies</div>
+                            </a>
+                        </div>
+                        <div class="footer__icons">
+                            <a href="#"><i class="icon-linkedin icon"></i></a>
+                            <a href="#"><i class="icon-facebook icon"></i></a>
+                            <a href="#"><i class="icon-instagram icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
